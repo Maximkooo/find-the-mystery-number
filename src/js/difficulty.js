@@ -12,4 +12,7 @@ class DifficultyLevel {
         return 100
     }
   }
+  changeLevel(level) {
+    this.level = level;
+  }
 }
