@@ -102,7 +102,7 @@ h2 {
   font-weight: bold;
 }
 
-#start-canvas button {
+.button-primary {
   color: white;
   border: none;
   border-radius: 5px;
@@ -110,12 +110,16 @@ h2 {
   cursor: pointer;
   font-size: 16px;
   width: 160px;
-}
-
-#start-canvas .button-primary {
   background-color: #4caf50;
 }
 
-#start-canvas .button-primary:hover {
+
+.button-primary:hover {
   background-color: #46a049;
+}
+
+.tries-count,
+.result__help__out {
+  font-style: italic;
+  font-weight: bold;
 }

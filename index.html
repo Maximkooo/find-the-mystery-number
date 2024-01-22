@@ -30,27 +30,31 @@
       </div>
       <div class="field">
         <label for="" class="filed__form__label">Your number: </label>
-        <input type="number" class="field__form__input" />
+        <input type="number" id="users-answer" class="field__form__input" />
         <button id="answer-btn" class="field__form__btn">Check</button>
       </div>
       <div class="result">
-        <div class="result__check">
-          <span class="result__check__label">Result:</span>
-          <span class="result__check__out"></span>
-        </div>
         <div class="result__help">
           <span class="result__help">Hint:</span>
-          <span class="result__help__out"></span>
+          <span id="hint-text" class="result__help__out">Write the number</span>
         </div>
         <div class="result__count">
           <span class="result__count__label">Number of tries:</span>
-          <span class="result__count__out"></span>
+          <span id="tries-count" class="result__count__out">0</span>
         </div>
       </div>
     </div>
 
     <div id="result-canvas" class="canvas">
-
+      <div class="desc">
+        <h1 class="desc__title">Game: Guess the number</h1>
+      </div>
+      <div class="result">
+        <h2>Your Result:</h2>
+      </div>
+      <div class="field">
+        <button id="new-game-btn" class="button-primary">New Game</button>
+      </div>
     </div>
   </div>
   <script src="./src/js/difficulty.js"></script>
