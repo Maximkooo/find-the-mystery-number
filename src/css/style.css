@@ -18,7 +18,7 @@ body {
   font-size: 16px;
   line-height: 1.2;
   height: 100%;
-  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(95, 57, 209));
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(95, 57, 209));
 }
 
 .container {
@@ -49,6 +49,13 @@ body {
   color: #222;
 }
 
+h2 {
+  font-size: 1.7em;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #222;
+}
+
 .desc__subtitle {
   color: #6c757d;
 }
@@ -68,4 +75,46 @@ body {
 .field__form__btn {
   padding: 10px;
   border: 1px solid #ccc;
+}
+
+#game-canvas,
+#result-canvas {
+  display: none;
+}
+
+/* #start-canvas,
+#result-canvas #game-canvas  */
+
+#choices {
+  min-width: 25px;
+  text-align: left;
+}
+
+
+#start-canvas ul {
+  list-style-type: none;
+  margin-right: 50px;
+}
+
+#start-canvas li {
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+button {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 160px;
+}
+
+.button-primary {
+  background-color: #4caf50;
+}
+
+.button-primary:hover {
+  background-color: #46a049;
 }

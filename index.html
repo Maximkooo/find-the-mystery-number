@@ -10,7 +10,18 @@
 
 <body>
   <div class="container">
-    <div class="canvas">
+    <div id="start-canvas" class="canvas">
+      <div class="desc">
+        <h1 class="desc__title">Game: Guess the number</h1>
+      </div>
+      <div class="field">
+        <h2>Difficulty level</h2>
+        <ul id="choices"></ul>
+        <button id="choiceLevelBtn" class="button-primary">Go</button>
+      </div>
+    </div>
+
+    <div id="game-canvas" class="canvas">
       <div class="desc">
         <h1 class="desc__title">Game: Guess the number</h1>
         <p class="desc__subtitle">
@@ -19,7 +30,7 @@
       </div>
       <div class="field">
         <label for="" class="filed__form__label">Your number: </label>
-        <input type="text" class="field__form__input" />
+        <input type="number" class="field__form__input" />
         <button class="field__form__btn">Check</button>
       </div>
       <div class="result">
@@ -37,7 +48,12 @@
         </div>
       </div>
     </div>
+
+    <div id="result-canvas" class="canvas">
+
+    </div>
   </div>
+  <script src="./src/js/difficulty.js"></script>
   <script src="./src/js/index.js"></script>
 </body>
 
