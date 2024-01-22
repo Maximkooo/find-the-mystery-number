@@ -1,15 +1,19 @@
 class DifficultyLevel {
-  constructor(level) {
+  constructor(level, answer) {
     this.level = level;
+    this.answer = answer;
   }
   checkLevelHandler() {
     switch (this.level) {
       case 'Easy':
-        return 10
+        this.answer = 10
+        break
       case 'Hard':
-        return 1000
+        this.answer = 1000
+        break
       default:
-        return 100
+        this.answer = 100
+        break
     }
   }
   changeLevel(level) {

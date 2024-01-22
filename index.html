@@ -25,13 +25,13 @@
       <div class="desc">
         <h1 class="desc__title">Game: Guess the number</h1>
         <p class="desc__subtitle">
-          The computer has guessed a number from 1 to 100. Your task is to guess it.
+          The computer has guessed a number from 1 to <span id="max-number"></span>. Your task is to guess it.
         </p>
       </div>
       <div class="field">
         <label for="" class="filed__form__label">Your number: </label>
         <input type="number" class="field__form__input" />
-        <button class="field__form__btn">Check</button>
+        <button id="answer-btn" class="field__form__btn">Check</button>
       </div>
       <div class="result">
         <div class="result__check">
@@ -54,6 +54,7 @@
     </div>
   </div>
   <script src="./src/js/difficulty.js"></script>
+  <script src="./src/js/game.js"></script>
   <script src="./src/js/index.js"></script>
 </body>
 
