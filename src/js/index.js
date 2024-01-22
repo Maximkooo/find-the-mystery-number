@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const usersAnswer = document.querySelector('#users-answer')
   const countOfTries = document.querySelector('#tries-count')
   const hintText = document.querySelector('#hint-text')
+  const resultScore = document.querySelector('#result-score')
+  const newGameBtn = document.querySelector('#new-game-btn')
 
   const levels = ['Easy', 'Medium', 'Hard']
   const moreHintsArr = [
@@ -38,14 +40,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const difficultyLevel = new DifficultyLevel()
   const game = new Game(0, moreHintsArr, lessHintsArr);
 
-  levels.forEach((level) => {
-    const liElement = document.createElement('li')
-    liElement.innerHTML = `
-      <input type="radio" name="choice" value="${level}">
-      <label>${level}</label>
-    <br>`;
-    choicesList.appendChild(liElement);
-  })
+  const startPage = () => {
+    choicesList.innerHTML = '';
+    levels.forEach((level) => {
+      const liElement = document.createElement('li')
+      liElement.innerHTML = `
+        <input type="radio" name="choice" value="${level}">
+        <label>${level}</label>
+      <br>`;
+      choicesList.appendChild(liElement);
+    })
+  }
+  startPage()
+
 
   const levelBtnHandler = () => {
     const choices = document.querySelectorAll('input[name=choice]');
@@ -69,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const checkAnswerHandler = () => {
     if (game.attempt(usersAnswer.value)) {
+      resultScore.textContent = game.tries
       gameCanvas.style.display = 'none';
       resultCanvas.style.display = 'flex';
     }
@@ -77,10 +85,21 @@ document.addEventListener('DOMContentLoaded', () => {
     countOfTries.textContent = game.tries;
   }
 
+  const newGame = () => {
+    game.tries = 0;
+    countOfTries.textContent = 0
+    usersAnswer.value = ''
+    hintText.textContent = 'Write the number'
+    startPage()
+    resultCanvas.style.display = 'none';
+    startCanvas.style.display = 'flex';
+  }
+
 
 
   choiceLevelBtn.addEventListener('click', levelBtnHandler);
   answerBtn.addEventListener('click', checkAnswerHandler);
+  newGameBtn.addEventListener('click', newGame);
 
 
 
