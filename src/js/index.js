@@ -65,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const startPage = () => {
-    historyHandler()
     choicesList.innerHTML = '';
     levels.forEach((level) => {
       const liElement = document.createElement('li')
@@ -76,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
       choicesList.appendChild(liElement);
     })
   }
-
+  historyHandler()
   startPage()
 
   const levelBtnHandler = () => {
@@ -101,6 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const checkAnswerHandler = () => {
     if (game.attempt(usersAnswer.value)) {
       setLocalStorageScore(game.tries)
+      historyHandler()
       resultScore.textContent = game.tries
       gameCanvas.style.display = 'none';
       resultCanvas.style.display = 'flex';
@@ -110,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const newGame = () => {
-    historyHandler()
     game.tries = 0;
     countOfTries.textContent = 0
     usersAnswer.value = ''
