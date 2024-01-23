@@ -1,6 +1,6 @@
 # FIND THE MYSTERY NUMBER
 
-<a href="https://maximkooo.github.io/find-the-mystery-number/">DEMO</a>
+<a target='_blank' href="https://maximkooo.github.io/find-the-mystery-number/">DEMO</a>
 
 This application is written in pure JavaScript using OOP. It is a simple mini game where you can test your intuition. Get fun!
 
