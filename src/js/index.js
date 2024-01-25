@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "I'm thinking we could use a bit less of that.",
     "How about subtracting just a smidgen?"
   ]
-
+  console.log('yes');
   const difficultyLevel = new DifficultyLevel()
   const game = new Game(0, moreHintsArr, lessHintsArr);
 
@@ -120,15 +120,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const setLocalStorageScore = (tries) => {
-    let globalScore = localStorage.getItem('score') || '[]'
-    globalScore = JSON.parse(globalScore);
+    let globalScore = getLocalStorageScore()
     globalScore.push({ result: tries, level: difficultyLevel.level })
     localStorage.setItem('score', JSON.stringify(globalScore));
   }
 
   function getLocalStorageScore() {
-    let globalScore = localStorage.getItem('score') || '[]'
-    return JSON.parse(globalScore);
+    return JSON.parse(localStorage.getItem('score') || '[]');
   }
 
 
