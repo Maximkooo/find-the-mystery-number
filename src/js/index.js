@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "I'm thinking we could use a bit less of that.",
     "How about subtracting just a smidgen?"
   ]
-  console.log('yes');
+
   const difficultyLevel = new DifficultyLevel()
   const game = new Game(0, moreHintsArr, lessHintsArr);
 
