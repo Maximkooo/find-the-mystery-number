@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     historyCard.classList.add('show')
     historyList.innerHTML = '';
     const historyItems = getLocalStorageScore()
-    // localStorage.clear()
+    localStorage.clear()
     if (!historyItems.length) {
       historyList.innerHTML = "You don't have history yet.";
     }
