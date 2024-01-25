@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const hintText = document.querySelector('#hint-text')
   const resultScore = document.querySelector('#result-score')
   const newGameBtn = document.querySelector('#new-game-btn')
-  const tostCard = document.querySelector('#history')
+  const historyCard = document.querySelector('#history')
   const historyList = document.querySelector('#history-list')
   const closeHistoryBtn = document.querySelector('#close-history')
 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const game = new Game(0, moreHintsArr, lessHintsArr);
 
   const historyHandler = () => {
-    tostCard.classList.add('show')
+    historyCard.classList.add('show')
     historyList.innerHTML = '';
     const historyItems = getLocalStorageScore()
     // localStorage.clear()
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     }
     setTimeout(() => {
-      tostCard.classList.remove('show')
+      historyCard.classList.remove('show')
     }, 1000 * 11)
   }
 
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
   answerBtn.addEventListener('click', checkAnswerHandler);
   newGameBtn.addEventListener('click', newGame);
   closeHistoryBtn.addEventListener('click', () => {
-    tostCard.classList.remove('show')
+    historyCard.classList.remove('show')
   });
 
 })

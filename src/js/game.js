@@ -20,6 +20,7 @@ class Game {
     this.randomHint = arr[Math.floor(Math.random() * arr.length)]
   }
   changeCorrectAnswer() {
+    //changeDifficulty - change maximum - our level
     this.correctAnswer = Math.floor(Math.random() * this.maximum + 1)
   }
   changeDifficulty(maximum) {
